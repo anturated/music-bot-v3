@@ -217,6 +217,7 @@ async def ensure_tables():
             "CREATE TABLE local_playlist_songs ("
             "p_id  INT,"
             "v_id  VARCHAR(255),"
+            "ind INT,"
             "PRIMARY KEY (p_id, v_id)," \
             "FOREIGN KEY (v_id) REFERENCES songs(id),"
             "FOREIGN KEY (p_id) REFERENCES local_playlists(id)"

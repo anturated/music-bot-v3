@@ -15,8 +15,7 @@ async def save_state(guild_id: int, state: PlayerStates, current: int, song_time
         "song_time = %(song_time)s,"
         "vc_id = %(vc_id)s,"
         "qm_id = %(qm_id)s,"
-        "qc_id = %(qc_id)s,"
-        "saved_at = CURRENT_TIMESTAMP"
+        "qc_id = %(qc_id)s"
     )
     data = {'g_id':guild_id, 'state': int(state), 'current':current, 'song_time': song_time, 'vc_id':vc_id, 'qm_id': q_msg_id, 'qc_id': qc_id }
 
