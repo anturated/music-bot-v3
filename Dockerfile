@@ -4,6 +4,9 @@ WORKDIR /app
 # install deps
 COPY reqs.txt .
 RUN pip install -r reqs.txt
+# HACK: removed py-cord from deps in favor of dev py-cord with voice v8 support.
+# pls change when 2.7.x comes out
+RUN python3 -m pip install git+https://github.com/Pycord-Development/pycord
 
 # get ffmpeg
 RUN command -v ffmpeg >/dev/null || \
